@@ -11,8 +11,10 @@ import Foundation
 
 public protocol IFileDestinationController {
     
-    /// Called before writing to file with current log file url
-    /// so you can check the size if you want to log into it or create new one
+    /// Called before writing to file with current log file url.
+    ///
+    /// So you can check the size of file before writing new
+    /// and decide whether to write on same file or return new URL
     func createNewLogFileIfNeeded(currentURL: URL) -> URL
     
 }
